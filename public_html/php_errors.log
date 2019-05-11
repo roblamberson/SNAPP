@@ -1,0 +1,7 @@
+[10-May-2019 03:34:03 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function universe\User::look(), 0 passed in /var/www/html/workspace/delivery/public_html/public.php on line 59 and exactly 1 expected in /var/www/html/workspace/delivery/php/Community.php:232
+Stack trace:
+#0 /var/www/html/workspace/delivery/public_html/public.php(59): universe\User->look()
+#1 {main}
+  thrown in /var/www/html/workspace/delivery/php/Community.php on line 232
+[10-May-2019 03:37:40 UTC] PHP Notice:  Undefined variable: client in /var/www/html/workspace/delivery/public_html/public.php on line 60
+[10-May-2019 03:37:40 UTC] PHP Notice:  Trying to get property 'password' of non-object in /var/www/html/workspace/delivery/public_html/public.php on line 60
