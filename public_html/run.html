@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Default theme - jQuery Mobile Demos</title>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+<!--	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+<!--	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+	<script>
+		$( document ).on( "pagecreate", function() {
+			$( "#theme-selector input" ).on( "change", function( event ) {
+				var themeClass = $( "#theme-selector input:checked" ).attr( "id" );
+
+				$( "#testpage" ).removeClass( "ui-page-theme-a ui-page-theme-b" ).addClass( "ui-page-theme-" + themeClass );
+				$( "#ui-body-test" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+				$( "#ui-bar-test, #ui-bar-form" ).removeClass( "ui-bar-a ui-bar-b" ).addClass( "ui-bar-" + themeClass );
+				$( ".ui-collapsible-content" ).removeClass( "ui-body-a ui-body-b" ).addClass( "ui-body-" + themeClass );
+				$( ".theme" ).text( themeClass );
+			});
+
+			$("#b").trigger("click");
+
+		});
+	
+	</script>
+	<style>
+		form.ui-mini .ui-field-contain fieldset.ui-controlgroup legend small {
+			color: #666;
+		}
+textarea{
+    height: 300px !important;
+    max-height: 300px !important;
+    overflow:auto !important;  
+}		
+		#textarea {height:300px;}
+	</style>
+</head>
+<body>
+<div data-role="page" id="testpage">
+
+	<div data-role="header">
+		<h1>SNAPP Command Window</h1>
+	</div><!-- /header -->
+
+	<div class="ui-content" role="main">
+		
+		<form class="ui-bar-form">
+			<div class="ui-field-contain" id="theme-selector">
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<label for="a">Light</label>
+					<input type="radio" name="theme" id="a" checked>
+					<label for="b">Dark</label>
+					<input type="radio" name="theme" id="b">
+				</fieldset>
+			</div>
+		</form>		
+				
+
+
+		<div id="ui-bar-form" class="ui-bar ui-bar-a">
+			<div class="ui-field-contain">
+				<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+			</div>		
+			<div class="ui-field-contain">
+				<input type="text" name="name4" id="name4" value="" data-clear-btn="true">
+			</div>
+		</div>
+		
+
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4 style="display:none;">SNAPP Command Window</h4>
+	</div>
+
+</div><!-- /page -->
+
+</body>
+</html>
