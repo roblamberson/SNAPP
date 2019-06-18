@@ -1,6 +1,6 @@
 <?php
 
-namespace universe;
+namespace Snapp;
 
 /**
  * access control for delivery system

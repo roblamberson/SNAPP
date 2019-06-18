@@ -34,7 +34,7 @@ require $config["php_dir"]."/Database.php";
 
 require $config["php_dir"]."/Community.php";
 
-use universe\User;
+use Snapp\User;
 
 /*
   _    _                 _    _ _   _ _ _ _   _           

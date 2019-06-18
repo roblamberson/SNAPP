@@ -8,7 +8,7 @@
  * Released under the MIT license
  */
 
-namespace universe;
+namespace Snapp;
 
 use PDO;
 use Exception;
